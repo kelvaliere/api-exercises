@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Finnhub tracker</title>
+        <style>
+            td,
+            th {
+                border: 1px solid;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script src="index.js"></script>
+
+        <input type="integer" id="min" placeholder="min" />
+        <input type="integer" id="sec" placeholder="sec" />
+        <input id="symbol" placeholder="symbol" />
+        <button onclick="GetPrices()">submit</button>
+
+        <br />
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Open Price</th>
+                    <th>High Price</th>
+                    <th>Low Price</th>
+                    <th>Current Price</th>
+                    <th>Previous Close Price</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="open">data</td>
+                    <td id="high">data</td>
+                    <td id="low">data</td>
+                    <td id="current">data</td>
+                    <td id="previous-close">data</td>
+                    <td id="time">data</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
