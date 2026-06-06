@@ -12,11 +12,21 @@ function GetPrices() {
       document.getElementById("low").textContent = "$" + data.l;
       document.getElementById("current").textContent = "$" + data.c;
       document.getElementById("previous-close").textContent = "$" + data.pc;
+      document.getElementById("time").textContent = data.t;
 
       // make the table elements here
+      const body = document.getElementById("tbody");
+      let arr = [data.o, data.h, data.l, data.c, data.pc, data.t];
 
       setInterval(() => {
-        // append here
+        const row = document.createElement("tr");
+
+        for (let i = 0; i < arr.length; i++) {
+          const cells = document.createElement("td");
+          body.append(row);
+          row.append(cells);
+          cells.append(arr[i]);
+        }
       }, sec * 1000);
     });
 }
